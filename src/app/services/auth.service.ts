@@ -1,24 +1,31 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
+import { map } from 'rxjs/operators';
 import { LOGIN } from '../graphql/queries/auth.query';
+import { ApolloQueryResult } from '@apollo/client';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class AuthService {
   constructor(private apollo: Apollo) {}
 
-  loginUser(username: string, password: string) {
-    const token = this.apollo.watchQuery({
-      query: LOGIN,
-      variables: {
-        data: {
-          username: username,
-          password: password,
+  async loginUser(username: string, password: string) {
+    try {
+      const queryRef = this.apollo.watchQuery({
+        query: LOGIN,
+        variables: {
+          data: {
+            username: username,
+            password: password,
+          },
         },
-      },
-    });
-
-    console.log({ token });
-
-    return token;
+      });
+      const result: ApolloQueryResult<any> = await firstValueFrom(
+        queryRef.valueChanges
+      );
+      return result.data.login;
+    } catch (err) {
+      alert('Please provide valid credetials');
+    }
   }
 }
