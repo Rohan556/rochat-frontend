@@ -62,9 +62,7 @@ export class UsersService {
         },
       })
       .subscribe({
-        next: ({ data }) => {
-          console.log({ data });
-        },
+        next: ({ data }) => {},
         error: (error) => {
           console.error('Error creating user:', error);
         },

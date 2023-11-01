@@ -30,6 +30,5 @@ export class UserListingComponent {
       Number(localStorage.getItem('user-id')),
       this.connectedUsers[index].id
     );
-    console.log(this.subscription);
   }
 }

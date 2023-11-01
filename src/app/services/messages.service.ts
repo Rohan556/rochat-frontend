@@ -39,8 +39,6 @@ export class MessagesService {
       })
       .subscribe(({ data }) => {
         if (data) {
-          console.log({ data });
-
           this.message.emit(data);
         }
       });
@@ -61,14 +59,11 @@ export class MessagesService {
         },
       })
       .subscribe({
-        next: ({ data }) => {
-          console.log({ data });
-        },
+        next: ({ data }) => {},
         error: (error) => {
           console.error('Error creating user:', error);
           // Handle errors here
         },
       } as Observer<any>);
-    console.log({ sent });
   }
 }

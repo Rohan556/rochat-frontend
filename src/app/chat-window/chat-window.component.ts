@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users.service';
 import { MessagesService } from '../services/messages.service';
+import { Router } from '@angular/router';
 
 export interface IUser {
   username: string;
@@ -29,8 +30,10 @@ export class ChatWindowComponent implements OnInit {
 
   constructor(
     private usersService: UsersService,
-    private messageService: MessagesService
+    private messageService: MessagesService,
+    private router: Router
   ) {
+    if (!localStorage.getItem('auth-token')) this.router.navigate(['/']);
     const id = localStorage?.getItem('user-id');
     this.userId = id ? +id : 0;
   }

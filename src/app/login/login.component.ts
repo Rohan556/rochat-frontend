@@ -17,6 +17,8 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router
   ) {
+    if (localStorage.getItem('auth-token')) this.router.navigate(['/chat']);
+
     this.myForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', [Validators.required]],

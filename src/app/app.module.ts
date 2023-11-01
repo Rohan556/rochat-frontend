@@ -18,6 +18,7 @@ import { MessagesService } from './services/messages.service';
 import { SearchComponent } from './search/search.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { UserCellComponent } from './user-cell/user-cell.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UserCellComponent } from './user-cell/user-cell.component';
     SearchComponent,
     SearchResultComponent,
     UserCellComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { UserCellComponent } from './user-cell/user-cell.component';
     RouterModule.forRoot([
       { path: 'chat', component: ChatWindowComponent },
       { path: '', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
     ]),
   ],
   providers: [AuthService, UsersService, MessagesService],

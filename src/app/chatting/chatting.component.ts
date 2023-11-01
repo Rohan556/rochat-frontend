@@ -27,13 +27,6 @@ export class ChattingComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.messagesService.message.subscribe((data) => {
-      console.log('sub');
-      console.log({
-        sender_id: data.getRealtimeMessage.sender_id,
-        content: data.getRealtimeMessage.getRealtimeMessage.toString(),
-        sent_time: new Date().toLocaleDateString(),
-      });
-
       const message = {
         sender_id: data.getRealtimeMessage.sender_id,
         content: data.getRealtimeMessage.getRealtimeMessage,
