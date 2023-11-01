@@ -1,6 +1,6 @@
 <div class="d-flex flex-column">
   <input type="text" class="form-control" placeholder="Search user" value="" (input)="handleSearch($event)" id="search-text">
-  <div *ngFor="let searchedUser of searchedUsers">
-    <app-user-cell [user]="searchedUser"></app-user-cell>
+  <div *ngFor="let searchedUser of searchedUsers" style="border: 0.5px solid white; border-radius: 8px;" (click)="createConnection(searchedUser)">
+    <app-user-cell [user]="searchedUser" class="user-cell"></app-user-cell>
   </div>
 </div>

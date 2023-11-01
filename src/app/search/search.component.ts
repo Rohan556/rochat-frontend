@@ -12,6 +12,11 @@ export class SearchComponent {
 
   constructor(private usersService: UsersService) {}
 
+  createConnection(user: IUser) {
+    this.usersService.createConnection(user.id);
+    this.searchedUsers = [];
+  }
+
   async handleSearch(event: any) {
     const searchString = event.target?.value as string;
 
