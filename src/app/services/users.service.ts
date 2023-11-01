@@ -4,7 +4,7 @@ import {
   GET_CONNECTED_USERS,
   GET_SEARCHED_USERS,
 } from '../graphql/queries/users.query';
-import { ApolloQueryResult } from '@apollo/client';
+import { ApolloQueryResult } from '@apollo/client/core';
 import { Observer, firstValueFrom } from 'rxjs';
 import { CREATE_CONNECTION_MUTATION } from '../graphql/mutations/users.mutation';
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import { LOGIN } from '../graphql/queries/auth.query';
-import { ApolloQueryResult } from '@apollo/client';
+import { ApolloQueryResult } from '@apollo/client/core';
 import { Observer, firstValueFrom } from 'rxjs';
 import { SIGNUP_USER } from '../graphql/mutations/auth.mutation';
 import { Router } from '@angular/router';

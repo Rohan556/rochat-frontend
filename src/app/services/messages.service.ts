@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { ApolloQueryResult } from '@apollo/client';
+import { ApolloQueryResult } from '@apollo/client/core';
 import { Apollo } from 'apollo-angular';
 import { Observer, firstValueFrom } from 'rxjs';
 import { GET_MESSAGES } from '../graphql/queries/messages.query';
