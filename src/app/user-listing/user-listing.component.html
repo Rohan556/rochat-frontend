@@ -1,0 +1,3 @@
+<div class="d-flex justify-content-between" *ngFor="let user of connectedUsers; let indexOfUser=index" class="listing" (click)="onUserSelect(indexOfUser)" [ngClass]="{'listing': user.id !== selected.id, 'listing-selected': user.id === selected.id, 'listing-global': true}">
+ <app-user-cell [user]="user"></app-user-cell>
+</div>

@@ -1,6 +1,5 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { map } from 'rxjs/operators';
 import { LOGIN } from '../graphql/queries/auth.query';
 import { ApolloQueryResult } from '@apollo/client';
 import { firstValueFrom } from 'rxjs';

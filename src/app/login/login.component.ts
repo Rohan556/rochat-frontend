@@ -30,11 +30,12 @@ export class LoginComponent {
     }
     const { username, password } = this.myForm.value;
 
-    const token = await this.authService.loginUser(username, password);
+    const loginOutput = await this.authService.loginUser(username, password);
 
-    if (!token) return;
+    if (!loginOutput) return;
 
-    localStorage.setItem('auth-token', token.accessToken);
+    localStorage.setItem('auth-token', loginOutput.token.accessToken);
+    localStorage.setItem('user-id', loginOutput.userId);
     this.router.navigate(['/chat']);
   }
 }

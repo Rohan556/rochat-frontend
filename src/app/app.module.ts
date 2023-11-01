@@ -11,6 +11,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { RouterModule } from '@angular/router';
 import { ChatWindowComponent } from './chat-window/chat-window.component';
+import { UserListingComponent } from './user-listing/user-listing.component';
+import { UsersService } from './services/users.service';
+import { ChattingComponent } from './chatting/chatting.component';
+import { MessagesService } from './services/messages.service';
+import { SearchComponent } from './search/search.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { UserCellComponent } from './user-cell/user-cell.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +25,11 @@ import { ChatWindowComponent } from './chat-window/chat-window.component';
     HeaderComponent,
     LoginComponent,
     ChatWindowComponent,
+    UserListingComponent,
+    ChattingComponent,
+    SearchComponent,
+    SearchResultComponent,
+    UserCellComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +42,7 @@ import { ChatWindowComponent } from './chat-window/chat-window.component';
       { path: '', component: LoginComponent },
     ]),
   ],
-  providers: [AuthService],
+  providers: [AuthService, UsersService, MessagesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

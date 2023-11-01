@@ -1,0 +1,72 @@
+.chat-top{
+  padding: 10px 20px;
+  height: 8vh;
+  background-color:#2E2E2E;
+  border: 0.5px solid #2196F3;
+  border-radius: 8px;
+}
+
+.message-content{
+  height: 75vh;
+  background-color: #2E2E2E;
+  overflow: auto;
+  border: 0.5px solid #2196F3;
+  border-radius: 8px;
+  box-shadow: #2E2E2E;
+}
+
+.message-wrapper {
+  margin-top: 5px;
+  margin-bottom: 5px; 
+  padding: 10px 30px;
+  border: 1px solid white;
+  width: 30vw;
+  border-radius: 10px;
+  border-bottom-right-radius: 1px;
+  width: fit-content;
+  order: -1;
+}
+
+.me-sent{
+  margin-left: auto;
+}
+
+.send-mess{
+  height: 7vh;
+}
+
+.send-btn{
+  width: 56px;
+  background-color:#4CAF50;
+  border-radius: 50%;
+  border: 1px solid #2196F3;
+  margin: 0px;
+}
+
+.plane{
+  color: white
+}
+
+#messInput{
+  background-color: #757575; 
+  color: white;
+  font-weight: 500;
+}
+
+#messInput::placeholder{
+  color: #B0B0B0;
+}
+
+.icon{
+  height: 40px;
+  width: 40px;
+  background-color: #1E1E1E;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.profile{
+  position: relative;
+  top: 8px;
+  left: 11.5px;
+}

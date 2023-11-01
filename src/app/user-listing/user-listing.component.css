@@ -1,0 +1,40 @@
+.listing{
+  background-color: #757575;
+  border: 0.5px solid #2196F3;
+}
+
+.listing-global{
+  padding: 5px 10px;
+  font-size: smaller;
+  border-radius: 7px;
+  margin: 1px 0;
+}
+
+.listing-selected{
+  background-color: #B0B0B0;
+  color: black;
+  border: 2px solid #2196F3;
+}
+
+.listing-global:hover{
+  cursor: pointer;
+}
+
+h4, h3{
+  margin-bottom: 0px;
+}
+
+.icon{
+  height: 45px;
+  width: 45px;
+  background-color: #1E1E1E;
+  border-radius: 50%;
+  z-index: 0;
+  position: relative;
+}
+
+.profile{
+  position: relative;
+  top: 10px;
+  left: 14px;
+}

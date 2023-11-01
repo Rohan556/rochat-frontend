@@ -1,0 +1,6 @@
+<div class="d-flex flex-column">
+  <input type="text" class="form-control" placeholder="Search user" value="" (input)="handleSearch($event)" id="search-text">
+  <div *ngFor="let searchedUser of searchedUsers">
+    <app-user-cell [user]="searchedUser"></app-user-cell>
+  </div>
+</div>

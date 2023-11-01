@@ -1,1 +1,9 @@
-<p>chat-window works!</p>
+<div  style="height: 100vh">
+  <div class="d-flex">
+    <div style="width: 25vw; margin: 1px;" >
+      <app-search></app-search>
+      <app-user-listing [connectedUsers]="connectedUsers" (selectedUser)="selectedUser($event)"></app-user-listing>
+    </div>  
+    <app-chatting style="width: 75vw;background-color: aliceblue; height: 85vh; margin: 1px;" [user]="userSelected" [messages]="messages" [selectedUser]="userSelected" *ngIf="userSelected"></app-chatting>
+  </div>
+</div>
